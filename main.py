@@ -52,7 +52,7 @@ def tocar(song):
     mixer.music.set_volume(vol)
     play_pause_btn.config(image=pause_img, command=lambda: pausar())
     nome()
-    now_playing.config(text=f'Now playing: {song_name}')
+    now_playing.config(text=f'Tocando: {song_name}')
 
 
 def pausar():
@@ -100,7 +100,6 @@ def aumentar():
         vol += 0.1
         vol_text += 1
         mixer.music.set_volume(vol)
-        print(vol)
         number.config(text=vol_text)
         centralizar()
 
@@ -126,13 +125,13 @@ def nome():
     global song_name
     if song_tocando == 'never':
         song_name = 'Never Let Me Down Again'
-        now_playing.place(x=70)
+        now_playing.place(x=85)
     elif song_tocando == 'moon':
         song_name = 'The Killing Moon'
-        now_playing.place(x=115)
+        now_playing.place(x=135)
     else:
         song_name = 'In The Meantime'
-        now_playing.place(x=115)
+        now_playing.place(x=135)
 
 
 pause_img = Image.open('player_de_musica_v2/imgs/pause.png')
