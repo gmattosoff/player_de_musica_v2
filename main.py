@@ -125,7 +125,7 @@ def nome():
     global song_name
     if song_tocando == 'never':
         song_name = 'Never Let Me Down Again'
-        now_playing.place(x=85)
+        now_playing.place(x=88)
     elif song_tocando == 'moon':
         song_name = 'The Killing Moon'
         now_playing.place(x=135)
